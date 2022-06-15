@@ -1,5 +1,12 @@
 /* ELEMENTS */
 
+:root {
+  --color-dark-gray: #2C3E50;
+  --color-white: #fff;
+  --color-green: #1abc9c;
+
+}
+
 * {
   box-sizing: border-box;
 }
@@ -13,7 +20,7 @@ body {
 
 footer {
     height: 120px;
-    background-color: #2C3E50;
+    background-color: var(--color-dark-gray);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,8 +28,14 @@ footer {
 
 /* CLASS, IDS */
 
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
 .nav-container {
-  background-color: #2c3e50;
+  background-color: var(--color-dark-gray);
   height: 100px;
   width: 100%;
   padding: 20px;
@@ -30,16 +43,13 @@ footer {
 }
 
 .nav-main {
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .nav-main a {
-  color: white;
+  color: var(--color-white);
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -63,8 +73,8 @@ footer {
 }
 
 .profile-container {
-  background-color: #1abc9c;
-  color: #fff;
+  background-color: var(--color-green);
+  color: var(--color-white);
   padding: 160px 0 60PX 0;
   display: flex;
   flex-direction: column;
@@ -85,17 +95,11 @@ footer {
   font-size: 1rem;
 }
 
-#portfolio {
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-}
-
 .portfolio-title {
   font-size: 2rem;
   text-transform: uppercase;
   text-align: center;
-  color: #2c3e50;
+  color: var(--color-green);
   margin: 60px 0 10px 0;
 }
 
@@ -114,7 +118,7 @@ footer {
 }
 
 .footer-title {
-    color: #fff;
+    color: var(--color-white);
     font-size: 14px;
     margin-top: 30px;
 }
@@ -123,4 +127,43 @@ footer {
     width: 32px;
     height: 32px;
     margin: 10px;
+}
+
+@media(min-width: 576px) {
+
+  html {
+    font-size: 20px;
+  }
+  
+}
+
+@media(min-width: 768px) {
+
+  html {
+    font-size: 24px;
+  }
+
+  .portfolio-item {
+    width: 280px;
+  } 
+
+  .nav-container {
+    display: flex;
+  }
+
+  .nav-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+  }
+
+  .nav-brand {
+    margin-bottom: 0;
+    font-size: 30px;
+  }
+
+  .menu-items li {
+    font-size: 18px;
+  } 
+  
 }
